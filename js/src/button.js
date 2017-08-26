@@ -171,7 +171,7 @@ const Button = (() => {
 
   EventHandler.on(document,
     Event.FOCUS_BLUR_DATA_API, Selector.DATA_TOGGLE_CARROT, (event) => {
-      const button = SelectorEngine.closest(event.target, Selector.BUTTON)[0]
+      const button = SelectorEngine.closest(event.target, Selector.BUTTON)
       if (/^focus(in)?$/.test(event.type)) {
         button.classList.add(ClassName.FOCUS)
       } else {
